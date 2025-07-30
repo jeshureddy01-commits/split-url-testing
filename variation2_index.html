@@ -3,17 +3,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variation 2 Page</title>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const vwoID = urlParams.get('id');
-    if (vwoID) {
-      const script = document.createElement('script');
-      script.src = `https://dev.visualwebsiteoptimizer.com/lib/${vwoID}.js`;
-      script.id = 'vwoCode';
-      script.referrerPolicy = 'no-referrer-when-downgrade';
-      document.head.appendChild(script);
-    }
-  </script>
+  <!-- Start VWO SmartCode --> 
+<script referrerPolicy="no-referrer-when-downgrade" src="https://dev.visualwebsiteoptimizer.com/lib/29000317.js" id="vwoCode"></script>   
+<!-- End VWO SmartCode -->
   <style>
     body { font-family: sans-serif; margin: 20px; background-color: #fff0f5; }
     .form-box, .buttons, .scroll-area { margin-bottom: 40px; }
