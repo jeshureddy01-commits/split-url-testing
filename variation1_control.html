@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variation 1 Page</title>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const vwoID = urlParams.get('id');
+    if (vwoID) {
+      const script = document.createElement('script');
+      script.src = `https://dev.visualwebsiteoptimizer.com/lib/${vwoID}.js`;
+      script.id = 'vwoCode';
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      document.head.appendChild(script);
+    }
+  </script>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background-color: #f0f8ff; }
+    .form-box, .buttons, .scroll-area { margin-bottom: 40px; }
+    button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Variation 1</h1>
+  <div class="form-box">
+    <form>
+      <label>Name: <input type="text" /></label><br><br>
+      <label>Email: <input type="email" /></label><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="buttons">
+    <button onclick="alert('Clicked!')">Click Me</button>
+    <button onclick="window.scrollTo(0, 0)">Scroll to Top</button>
+  </div>
+  <div class="scroll-area" style="height: 1500px; background: linear-gradient(#f0f8ff, gray);">
+    Scroll down to test long page behavior.
+  </div>
+</body>
+</html>
